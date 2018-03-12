@@ -92,4 +92,39 @@ void List::remove(int k)
 	}
 	
 	//Implementations of missing operations
+void List::checkposition(int k){
 	
+	if(k == 1)
+	{
+	  cout << endl << frontPtr->data << endl << endl;
+	 }
+	 
+	 else {
+	 
+	 Node* tmpPtr = nullptr;
+	  int loc = 1; 
+	  
+		for(tmpPtr = frontPtr; loc < k; loc++)
+		tmpPtr = tmpPtr->link;
+
+
+	cout << endl <<"value at position "<< k<< "  = "<< tmpPtr->data << endl << endl;
+	}
+}
+
+void List::clear(){
+	
+	
+	Node* delPtr;
+	while(frontPtr != nullptr){
+	
+	  delPtr = frontPtr;
+	  frontPtr = frontPtr->link;
+	 
+	 
+	 delete delPtr;
+	 num_elements--;
+ }
+ 
+	
+}
