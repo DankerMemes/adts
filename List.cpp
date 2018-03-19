@@ -92,11 +92,12 @@ void List::remove(int k)
 	}
 	
 	//Implementations of missing operations
-void List::checkposition(int k){
+int List::checkposition(int k){
 	
 	if(k == 1)
 	{
 	  cout << endl << frontPtr->data << endl << endl;
+	  return frontPtr->data;
 	 }
 	 
 	 else {
@@ -109,6 +110,7 @@ void List::checkposition(int k){
 
 
 	cout << endl <<"value at position "<< k<< "  = "<< tmpPtr->data << endl << endl;
+	return tmpPtr->data;
 	}
 }
 
